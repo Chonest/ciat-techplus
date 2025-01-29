@@ -2,7 +2,7 @@
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
     }
     return array;
 }
@@ -26,9 +26,12 @@ let counter;
 let counterLine;
 let shuffledQuestions = [];
 
+// Shuffle and select only 50 questions (or less if questions.length < 50)
+const numQuestions = Math.min(50, questions.length); // Get the smaller of 50 or array length
+shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions);
+
 // If startQuiz button clicked
 start_btn.onclick = () => {
-    shuffledQuestions = shuffleArray([...questions]); // Shuffle questions
     info_box.classList.add("activeInfo"); // Show info box
 };
 
@@ -48,7 +51,7 @@ function startTimer(duration) {
         if (time === 0) {
             clearInterval(counter);
             timeText.textContent = "Time Off";
-            // autoSelectCorrectAnswer(false);  // If you have this function defined
+            // autoSelectCorrectAnswer(false); // If you have this function defined
         }
     }, 1000);
 }
@@ -95,7 +98,8 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // If restartQuiz button clicked
 restart_quiz.onclick = () => {
-    shuffledQuestions = shuffleArray([...questions]);
+    // Reshuffle and select questions for the restarted quiz
+    shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions);
     quiz_box.classList.add("activeQuiz");
     result_box.classList.remove("activeResult");
     timeValue = 60;
@@ -116,7 +120,7 @@ quit_quiz.onclick = () => {
 };
 
 const next_btn = document.querySelector("footer .next_btn");
-const submit_btn = document.querySelector("footer .submit_btn"); // No longer getting by ID
+const submit_btn = document.querySelector("footer .submit_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // Show questions function
@@ -150,7 +154,7 @@ function showQuestions(index) {
         submit_btn.classList.remove("show"); // Remove the 'show' class for multiple choice
     } else { // Single-answer question
         submit_btn.style.display = "none"; // Hide for single-answer
-        submit_btn.classList.add("show");  // Show the button AND the show class for single answer
+        submit_btn.classList.add("show"); // Show the button AND the show class for single answer
     }
 }
 
@@ -158,10 +162,8 @@ function showQuestions(index) {
 function optionSelected(answer) {
     let correctAns = shuffledQuestions[que_count].answer;
 
-    if (Array.isArray(correctAns)) {  // Multiple-choice question
+    if (Array.isArray(correctAns)) { // Multiple-choice question
         answer.classList.toggle("selected"); // Correctly toggle the 'selected' class
-
-        // No need to disable here for multiple choice, let user change before submit
 
     } else { // Single-answer question (your existing logic)
         clearInterval(counter);
@@ -266,7 +268,7 @@ submit_btn.onclick = () => {
 
 // If Next Question button clicked
 next_btn.onclick = () => {
-    if (que_count < shuffledQuestions.length - 1) {
+    if (que_count < shuffledQuestions.length - 1) { // Check against shuffledQuestions.length
         que_count++;
         showQuestions(que_count);
         queCounter(que_count + 1);
@@ -281,11 +283,11 @@ next_btn.onclick = () => {
         startTimerLine();
         timeText.textContent = "Time Left";
 
-        //Re-enable options
+        // Re-enable options
         option_list.querySelectorAll(".option").forEach(opt => opt.classList.remove("disabled"));
 
     } else {
-        showResult();
+        showResult(); // Stop quiz and show result after all questions
     }
 };
 
@@ -295,12 +297,12 @@ function showResult() {
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
-    let scoreTag = `<span>You got <p>${userScore}</p> out of <p>${questions.length}</p></span>`;
+    let scoreTag = `<span>You got <p>${userScore}</p> out of <p>${shuffledQuestions.length}</p></span>`; // Use shuffledQuestions.length
     scoreText.innerHTML = scoreTag;
 }
 
 // Update question counter
 function queCounter(index) {
-    let totalQueCounTag = `<span><p>${index}</p> of <p>${questions.length}</p> Questions</span>`;
+    let totalQueCounTag = `<span><p>${index}</p> of <p>${shuffledQuestions.length}</p> Questions</span>`; // Use shuffledQuestions.length
     bottom_ques_counter.innerHTML = totalQueCounTag;
 }
