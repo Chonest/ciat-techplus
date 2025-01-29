@@ -318,3 +318,9 @@ footer .submit_btn:hover {
     font-size: 18px;
     font-weight: 500;
 }
+
+.score_text span {
+    display: inline-block; /* or inline; if you don't need block properties */
+    white-space: nowrap; /* Prevent wrapping of the entire score text */
+    margin: 0; /* Remove any default margins */
+}
