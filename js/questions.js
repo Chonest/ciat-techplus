@@ -976,7 +976,7 @@ let questions = [
     {
         numb: 89,
         question: "Which of the following is a required hardware device to use augmented reality?",
-        answer: "AR headset",
+        answer: "Display",
         options: [
             "AR headset",
             "Earbuds/headphones",
