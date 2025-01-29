@@ -297,7 +297,7 @@ function showResult() {
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
-    let scoreTag = `<span>You got <p>${userScore}</p> out of <p>${shuffledQuestions.length}</p></span>`; // Use shuffledQuestions.length
+    let scoreTag = `<span>You got ${userScore} out of ${shuffledQuestions.length}</span>`;
     scoreText.innerHTML = scoreTag;
 }
 
