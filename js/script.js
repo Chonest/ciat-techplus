@@ -25,13 +25,14 @@ let userScore = 0;
 let counter;
 let counterLine;
 let shuffledQuestions = [];
+let askedQuestions = []; // Array to track asked questions
 
 // Shuffle and select only 50 questions (or less if questions.length < 50)
-const numQuestions = Math.min(50, questions.length); // Get the smaller of 50 or array length
-shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions);
+const numQuestions = Math.min(50, questions.length);
 
 // If startQuiz button clicked
 start_btn.onclick = () => {
+    shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions); // Initial shuffle
     info_box.classList.add("activeInfo"); // Show info box
 };
 
@@ -91,6 +92,7 @@ continue_btn.onclick = () => {
     startTimer(60);
     time_line.style.width = "0";
     startTimerLine();
+    askedQuestions = []; // Reset asked questions for a new game
 };
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
@@ -98,8 +100,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // If restartQuiz button clicked
 restart_quiz.onclick = () => {
-    // Reshuffle and select questions for the restarted quiz
-    shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions);
+    shuffledQuestions = shuffleArray([...questions]).slice(0, numQuestions); // New shuffle and slice
     quiz_box.classList.add("activeQuiz");
     result_box.classList.remove("activeResult");
     timeValue = 60;
@@ -113,6 +114,7 @@ restart_quiz.onclick = () => {
     time_line.style.width = "0";
     startTimerLine();
     timeText.textContent = "Time Left";
+    askedQuestions = []; // Reset asked questions for a new game
 };
 
 quit_quiz.onclick = () => {
@@ -125,6 +127,13 @@ const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // Show questions function
 function showQuestions(index) {
+    // Check for repeated questions
+    while (askedQuestions.includes(index)) {
+        index = Math.floor(Math.random() * shuffledQuestions.length); // Generate a new index
+    }
+
+    askedQuestions.push(index); // Add the current index to askedQuestions
+
     const que_text = document.querySelector(".que_text");
     const currentQuestion = shuffledQuestions[index];
     const shuffledOptions = shuffleArray([...currentQuestion.options]);
