@@ -2357,13 +2357,13 @@ let questions = [
     {
         numb: 214,
         question: "You are in a library that has free computers to use for Internet browsing. Which of the following should you possibly be concerned about?",
-        answer: "A, B, and C",
+        answer: "Shoulder surfing, Keyloggers, & Unsecured wireless network",
         options: [
             "Shoulder surfing",
             "Keyloggers",
             "Unsecured wireless network",
-            "A and B",
-            "A, B, and C"
+            "Shoulder surfing & Keyloggers",
+            "Shoulder surfing, Keyloggers, & Unsecured wireless network"
         ]
     },
     {
