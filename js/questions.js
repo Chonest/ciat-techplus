@@ -415,7 +415,7 @@ let questions = [
     {
         numb: 38,
         question: "Which of the following statements is true about DVI connectors?",
-        answer: "They are digital only.",
+        answer: "They are digital and analog.",
         options: [
             "They are digital only.",
             "They are analog only.",
@@ -469,7 +469,7 @@ let questions = [
     {
         numb: 43,
         question: "Which motion while using an iPhone allows you to zoom in on a map?",
-        answer: "Pinch",
+        answer: "Reverse pinch",
         options: [
             "Tap",
             "Double tap",
@@ -491,7 +491,7 @@ let questions = [
     {
         numb: 45,
         question: "Rachel is using her iPad to view pictures. She turns the iPad 90 degrees and the image turns as well. Which sensor allowed this to happen?",
-        answer: "Accelerometer",
+        answer: "Gyroscope",
         options: [
             "Accelerometer",
             "Magnetometer",
@@ -546,7 +546,7 @@ let questions = [
     {
         numb: 50,
         question: "Which of the following is a required hardware device to use augmented reality?",
-        answer: "Smartphone",
+        answer: "Display",
         options: [
             "AR headset",
             "Earbuds/headphones",
@@ -557,7 +557,7 @@ let questions = [
     {
         numb: 51,
         question: "Your friend recently got a new Android phone and comes over to your house. What app does your friend use to set up a Wi-Fi connection with your wireless router?",
-        answer: "Wi-Fi",
+        answer: "Settings",
         options: [
             "Wi-Fi",
             "Settings",
@@ -612,7 +612,7 @@ let questions = [
     {
         numb: 56,
         question: "Which of the following accurately describes what Airplane mode does on an iPhone?",
-        answer: "Turns off all wireless connections",
+        answer: "Turns off the cellular connection",
         options: [
             "Turns off the Wi-Fi connection",
             "Turns off the Bluetooth connection",
@@ -656,7 +656,7 @@ let questions = [
     {
         numb: 60,
         question: "Rebecca wants to get a copy of the newest game she heard about for her iPad. Where should she go to find and download it?",
-        answer: "App Store",
+        answer: "iTunes",
         options: [
             "iTunes",
             "iApps",
@@ -667,7 +667,7 @@ let questions = [
     {
         numb: 61,
         question: "Which of the following is not a function of an operating system?",
-        answer: "Interface between the user and the machine",
+        answer: "Coordinate software applications",
         options: [
             "Interface between the user and the machine",
             "Coordinate software applications",
@@ -722,7 +722,7 @@ let questions = [
     {
         numb: 66,
         question: "With which of the following file systems can you not rename a file when it’s open?",
-        answer: "APFS",
+        answer: "NTFS",
         options: [
             "ext3",
             "ext4",
@@ -767,7 +767,7 @@ let questions = [
     {
         numb: 70,
         question: "Which of the following is not a feature of a file system?",
-        answer: "Attribution",
+        answer: "Access control",
         options: [
             "Permissions",
             "Encryption",
@@ -800,7 +800,7 @@ let questions = [
     {
         numb: 73,
         question: "You just copied a file from the Work directory to the Projects directory on your Windows PC. What happened to the file on the hard drive?",
-        answer: "The file was not moved, but a new pointer record was created associating the file with the Projects directory.",
+        answer: "The file was copied to a new location on the hard drive and was associated with the Projects directory.",
         options: [
             "Nothing.",
             "The file was removed from the Work directory and placed in the Projects directory.",
@@ -844,7 +844,7 @@ let questions = [
     {
         numb: 77,
         question: "You need to prepare a brand-new replacement hard drive for storage. What is the first step needed to get it ready?",
-        answer: "Format the drive.",
+        answer: "Create a partition.",
         options: [
             "Format the drive.",
             "Install an OS.",
@@ -1165,7 +1165,7 @@ let questions = [
     {
         numb: 106,
         question: "Which of the following are examples of interpreted languages? (Choose two.)",
-        answer: ["Scripted", "Query"],
+        answer: ["Scripted", "Markup"],
         options: [
             "Compiled",
             "Query",
@@ -1242,7 +1242,7 @@ let questions = [
     {
         numb: 113,
         question: "A program shows the number 11010.11. Which data type is this?",
-        answer: "Binary",
+        answer: "Float",
         options: [
             "Binary",
             "Boolean",
@@ -1408,7 +1408,7 @@ let questions = [
     {
         numb: 128,
         question: "Mary, an administrator, creates a field and designates it to hold integer data. Joe, a user, tries to enter his name in the field, but it doesn’t let him save the data. What is this an example of?",
-        answer: "Schema rules",
+        answer: "Constraints",
         options: [
             "Schema rules",
             "Primary key",
@@ -1419,7 +1419,7 @@ let questions = [
     {
         numb: 129,
         question: "Rachel, a database administrator, has created a database for her website. It contains pictures of vacations that people have uploaded. In the database, pictures have associated information about who uploaded them and the date. What is this an example of?",
-        answer: "Structured data",
+        answer: "Semi-structured data",
         options: [
             "Semi-structured data",
             "Nonstructured data",
@@ -1430,7 +1430,7 @@ let questions = [
     {
         numb: 130,
         question: "Peter is accessing a database using a JDBC connection. Which of the following terms best describes the type of access he is using?",
-        answer: "Programmatic access",
+        answer: "Direct/manual access",
         options: [
             "Direct/manual access",
             "Programmatic access",
@@ -1529,7 +1529,7 @@ let questions = [
     {
         numb: 139,
         question: "Which of the following descriptions best describes the type of structure that stores values as blobs?",
-        answer: "Document database",
+        answer: "Key-value database",
         options: [
             "Relational database",
             "Nonrelational database",
@@ -1562,7 +1562,7 @@ let questions = [
     {
         numb: 142,
         question: "Which one of the following types of network connections can give you the highest data transfer rates?",
-        answer: "Fiber-optic",
+        answer: "DSL",
         options: [
             "T1",
             "DSL",
@@ -1606,7 +1606,7 @@ let questions = [
     {
         numb: 146,
         question: "This question refers to the scenario at the end of the chapter, in “Configuring a Small Office Network.” When connecting client computers to the network, what password do they need to enter?",
-        answer: "No password is required.",
+        answer: "Tx$pr4y2",
         options: [
             "tpg$2015",
             "7ygH$2p*",
@@ -1683,7 +1683,7 @@ let questions = [
     {
         numb: 153,
         question: "Which one of these connection types has the longest delay?",
-        answer: "Satellite",
+        answer: "Cellular",
         options: [
             "Wireless",
             "Infrared",
@@ -1760,7 +1760,7 @@ let questions = [
     {
         numb: 160,
         question: "This question refers to the scenario at the end of the chapter. Your friend wants the tax prep agents to be able to let clients connect their wireless devices to the network. Which password should she tell the agents to give to clients?",
-        answer: "Tx$pr4y2",
+        answer: "tpg$2015",
         options: [
             "7ygH$2p*",
             "tpg$2015",
@@ -1859,7 +1859,7 @@ let questions = [
     {
         numb: 169,
         question: "You need to purchase the lowest level of cloud services possible to enable programmers on your team to have development tools. Which level of service should you purchase?",
-        answer: "IaaS",
+        answer: "PaaS",
         options: [
             "PaaS",
             "IaaS",
@@ -1903,7 +1903,7 @@ let questions = [
     {
         numb: 173,
         question: "A virtual router and network infrastructure can be provided as part of which of the following cloud service levels? (Choose all that apply.)",
-        answer: ["IaaS", "PaaS"],
+        answer: ["SaaS", "PaaS", "IaaS"],
         options: [
             "SaaS",
             "PaaS",
@@ -2091,7 +2091,7 @@ let questions = [
     {
         numb: 190,
         question: "If you are concerned about confidentiality of client records, which of the following should you be on the lookout for? (Choose two.)",
-        answer: ["Eavesdropping", "Wiretapping"],
+        answer: ["Eavesdropping", "Social engineering"],
         options: [
             "Eavesdropping",
             "Denial of service",
@@ -2124,7 +2124,7 @@ let questions = [
     {
         numb: 193,
         question: "Which of the following operating systems are susceptible to viruses?",
-        answer: "Windows, macOS, and Linux",
+        answer: "Windows, macOS, Linux, and Android",
         options: [
             "Windows",
             "Windows and macOS",
@@ -2135,7 +2135,7 @@ let questions = [
     {
         numb: 194,
         question: "A network administrator wants to enable accounting on her network. Which options should she use? (Choose two.)",
-        answer: ["Transaction logs", "Biometrics"],
+        answer: ["Transaction logs", "Web browser history"],
         options: [
             "Biometrics",
             "Transaction logs",
@@ -2212,7 +2212,7 @@ let questions = [
     {
         numb: 201,
         question: "Due to a recent string of thefts in your office, you need to harden your local system. What two actions are most appropriate for your situation? (Choose two.)",
-        answer: ["Disable unused services", "Enable encryption"],
+        answer: ["Install a hardware lock", "Enable encryption"],
         options: [
             "Install a hardware lock",
             "Disable unused services",
@@ -2313,7 +2313,7 @@ let questions = [
     {
         numb: 210,
         question: "Which of the following actions is not considered a web-browsing best practice?",
-        answer: "Disabling Autofill",
+        answer: "Closing untrusted source warnings",
         options: [
             "Limiting the use of PII",
             "Disabling Autofill",
@@ -2357,7 +2357,7 @@ let questions = [
     {
         numb: 214,
         question: "You are in a library that has free computers to use for Internet browsing. Which of the following should you possibly be concerned about?",
-        answer: "A and B",
+        answer: "A, B, and C",
         options: [
             "Shoulder surfing",
             "Keyloggers",
@@ -2435,7 +2435,7 @@ let questions = [
     {
         numb: 221,
         question: "When troubleshooting a computer problem, which of the following are steps you can take to identify the problem? (Choose two.)",
-        answer: ["Use external resources such as the Internet.", "Talk to end users."],
+        answer: ["Talk to end users.", "Isolate the issue."],
         options: [
             "Use external resources such as the Internet.",
             "Talk to end users.",
@@ -2556,7 +2556,7 @@ let questions = [
     {
         numb: 232,
         question: "You have just installed a new printer on your computer, and while it seems to be recognized by the operating system, it will not print. What is the first source to check for information on the problem?",
-        answer: "The printer manufacturer’s website.",
+        answer: "The printer manufacturer’s website",
         options: [
             "The OS manufacturer’s website",
             "The printer manufacturer’s website",
@@ -2622,7 +2622,7 @@ let questions = [
     {
         numb: 238,
         question: "You are asked to troubleshoot a computer, and your friend recommends you take a POST card with you. What can the POST card help you diagnose?",
-        answer: "Startup problems resulting in a BIOS error message",
+        answer: "Startup problems where nothing is displayed on the screen",
         options: [
             "Application problems",
             "Overheating problems",
