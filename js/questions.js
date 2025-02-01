@@ -294,7 +294,7 @@ let questions = [
     {
         numb: 27,
         question: "Rebecca points at a flat square below her keyboard on her laptop and asks what that is. What is it?",
-        answer: "Trackpad",
+        answer: "Touchpad",
         options: [
             "Trackpad",
             "Touchpad",
