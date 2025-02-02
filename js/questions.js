@@ -1604,17 +1604,6 @@ let questions = [
         ]
     },
     {
-        numb: 146,
-        question: "This question refers to the scenario at the end of the chapter, in “Configuring a Small Office Network.” When connecting client computers to the network, what password do they need to enter?",
-        answer: "Tx$pr4y2",
-        options: [
-            "tpg$2015",
-            "7ygH$2p*",
-            "Tx$pr4y2",
-            "No password is required."
-        ]
-    },
-    {
         numb: 147,
         question: "Your friend Maria asks you which router feature helps secure against malicious network traffic. What do you tell her?",
         answer: "Firewall",
@@ -1755,17 +1744,6 @@ let questions = [
             "Change the SSID",
             "Change the admin password",
             "Configure the firewall"
-        ]
-    },
-    {
-        numb: 160,
-        question: "This question refers to the scenario at the end of the chapter. Your friend wants the tax prep agents to be able to let clients connect their wireless devices to the network. Which password should she tell the agents to give to clients?",
-        answer: "tpg$2015",
-        options: [
-            "7ygH$2p*",
-            "tpg$2015",
-            "Tx$pr4y2",
-            "No password is required."
         ]
     },
     {
