@@ -17,6 +17,36 @@ body {
     background: #007bff;
 }
 
+/* ... (rest of your CSS) ... */
+
+/* ✅ Correct answer -  HIGHLIGHT THE WHOLE BOX */
+.option.correct {
+    background-color: #d4edda !important; /* Use important to override other styles */
+    border: 1px solid #155724 !important;
+    color: #155724 !important;
+}
+
+/* ❌ Incorrect answer - HIGHLIGHT THE WHOLE BOX */
+.option.incorrect {
+    background-color: #f8d7da !important;
+    border: 1px solid #721c24 !important;
+    color: #721c24 !important; 
+}
+
+/* 🔵 Selected answer before submission - HIGHLIGHT THE WHOLE BOX */
+.option.selected {
+    background-color: #cce5ff !important;
+    border: 1px solid #007bff !important;
+    color: #004085 !important;
+}
+
+/* ❌ Correct answers that were NOT selected - HIGHLIGHT THE WHOLE BOX */
+.option.unselected-correct {
+    background-color: #d4edda !important;
+    border: 1px solid #28a745 !important;
+    color: #155724 !important;
+}
+
 /* Containers */
 .start_btn,
 .info_box,
